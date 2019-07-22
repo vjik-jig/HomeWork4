@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Triangle - Function</title>
+  </head>
+  <body>
+    <script>
+      var result = +prompt("Введите число больше нуля", 5);
+      var message = "";
+      var messFull = "";
+      function showTriangle(repeatTimes, messageSymbol) {
+        messageSymbol = "*";
+        message += messageSymbol;
+        return (messFull += message + "\n");
+      }
+      if (isNaN(result) || result == 0) {
+        alert("Вы ввели не верные данные");
+      } else {
+        for (var i = 1; i <= result; i++) {
+          showTriangle(result);
+        }
+        console.log(messFull);
+      }
+    </script>
+  </body>
+</html>
