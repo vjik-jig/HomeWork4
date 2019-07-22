@@ -9,8 +9,8 @@
       var result = +prompt("Введите число больше нуля", 5);
       var message = "";
       var messFull = "";
-      function showTriangle(repeatTimes, messageSymbol) {
-        messageSymbol = "*";
+      function showTriangle() {
+        var messageSymbol = "*";
         message += messageSymbol;
         return (messFull += message + "\n");
       }
@@ -18,7 +18,7 @@
         alert("Вы ввели не верные данные");
       } else {
         for (var i = 1; i <= result; i++) {
-          showTriangle(result);
+          showTriangle();
         }
         console.log(messFull);
       }
