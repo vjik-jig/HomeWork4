@@ -2,26 +2,45 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Triangle - Function</title>
+    <title>Triangle</title>
   </head>
   <body>
     <script>
-      var result = +prompt("Введите число больше нуля", 5);
-      var message = "";
-      var messFull = "";
-      function showTriangle() {
+      function showTriangle(result) {
+        var result = +prompt("Введите число больше нуля", 5);
+        var message = "";
+        var messFull = "";
         var messageSymbol = "*";
-        message += messageSymbol;
-        return (messFull += message + "\n");
-      }
-      if (isNaN(result) || result == 0) {
-        alert("Вы ввели не верные данные");
-      } else {
-        for (var i = 1; i <= result; i++) {
-          showTriangle();
+        if (isNaN(result) || result == 0) {
+          return alert("Вы ввели не верные данные");
+        } else {
+          for (var i = 1; i <= result; i++) {
+            message += messageSymbol;
+            messFull += message + "\n";
+          }
         }
-        console.log(messFull);
+        return messFull;
       }
+      console.log(showTriangle());
+
+      // Вторая часть задания
+
+      var c = function() {
+        return (aB = 1 + 20);
+      };
+      function f(a, b, c) {
+        a = a || 2;
+        b = b || 3;
+        if (c && typeof c == "function") {
+          return c();
+        } else {
+          function sum() {
+            return a + b;
+          }
+          return sum();
+        }
+      }
+      console.log(f(10, 2, c)); // Вводим для проверки данные
     </script>
   </body>
 </html>
